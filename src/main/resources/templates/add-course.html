@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Final for Barbara Tosetto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet" type="text/css">
+</head>
+<header th:insert="~{@{/fragments/header.html}}"></header>
+<body>
+    <div class="container">
+        <h2 class="mt-5">Add a course for <span th:text="${student.name}"></span></h2>
+        <form action="/add-course" method="post" >
+            <div class="form-group">
+                <input type="hidden" name="studentId" th:value="${student.id}" />
+                <label for="name">Course name:</label>
+                <input class="form-control" type="text" id="name" name="name" th:value="${course.name}" style="width: 300px;"/>
+                <label for="grade">Grade:</label>
+                <input class="form-control" type="number" id="grade" name="grade" th:value="${course.grade}" style="width: 300px;"/>
+                <br>
+                <button type="submit" class="btn btn-dark">Add Course</button>
+            </div>
+        </form>
+        <br>
+        <a th:href="'/view-student?id=' + ${student.id}" class="btn btn-dark">Back to courses</a>
+        <br>
+        <br>
+        <a href="/" class="btn btn-dark">Back to index</a>
+        <th:block th:replace="fragments/footer :: footer"/>
+    </div>
+</body>
+</html>
+
+

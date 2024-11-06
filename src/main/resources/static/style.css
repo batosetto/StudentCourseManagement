@@ -1,0 +1,35 @@
+body {
+    background-color: #816c9a;
+    color: #fbfbfb;
+}
+
+.navbar, .form-control, .btn-dark {
+    background-color: #612da1;
+    border-color: #d3d3d3;
+    color: #d3d3d3;
+}
+
+.btn-dark {
+    background-color: #4c464c;
+    border-color: #605757;
+    color: #d3d3d3;
+}
+
+header {
+    background-color: #493358;
+    color: #f5f3f6;
+    padding: 5px;
+}
+
+.footer {
+    color: #d3d3d3;
+    background-color: #e7dbf4;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+

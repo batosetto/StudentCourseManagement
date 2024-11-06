@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Final for Barbara Tosetto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet" type="text/css">
+    <header th:insert="~{@{/fragments/header.html}}"></header>
+</head>
+<body>
+    <div class="container">
+        <h2 class="mt-5">Courses for <span th:text="${student.name}"></span></h2>
+        <ul class="list-group">
+          <li th:each="course : ${courses}" th:text="${course.name + ': ' + course.grade}" class="list-group-item"></li>
+        </ul>
+        <br>
+        <a th:href="'/add-course?studentId=' + ${student.id}" class="btn btn-dark">Add a course</a>
+        <br>
+        <br>
+        <a href="/" class="btn btn-dark">Back to index</a>
+
+    </div>
+    <footer th:insert="~{@{/fragments/footer.html}}"></footer>
+</body>
+</html>
+

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Final for Barbara Tosetto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet" type="text/css">
+</head>
+<header th:insert="~{@{/fragments/header.html}}"></header>
+<body>
+        <div class="container">
+            <h2 class="mt-5">An error occurred. Please check the information required in order to add a new course.</h2>
+            <h5 th:text="${errorMessage}"></h5>
+            <a href="/" class="btn btn-dark">Back to index</a>
+            <th:block th:replace="fragments/footer :: footer"/>
+        </div>
+    </body>
+</html>
